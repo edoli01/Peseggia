@@ -1,0 +1,417 @@
+@font-face {
+  font-family: 'TestManukaSlab-Black';
+  src: url('font/TestManukaSlab-Black-BF663c33db53960.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TestManuka-Medium';
+  src: url('font/TestManuka-Medium-BF663c33db67c40.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TestManuka-Regular';
+    src: url('font/TestManuka-Regular-BF663c33db89825.otf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'TestManuka-Light';
+    src: url('font/TestManuka-Light-BF663c33db8aab4.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'TestManuka-Thin';
+    src: url('font/TestManuka-Thin-BF663c33db97e05.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Borna-Medium';
+    src: url('font/Borna-Medium.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Borna-Regular';
+    src: url('font/Borna-Regular.otf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'TestManukaSlab-Medium';
+    src: url('font/TestManukaSlab-Medium-BF663c33db66d36.otf') format('truetype');
+  }
+
+
+
+
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #F1EEE9;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    cursor: none;
+    caret-color: transparent;
+  }
+  
+  .background-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    min-height: 100vh;
+  }
+  
+  .background {
+    position: absolute;
+    inset: 0;
+    background: url('img/Sfondo_home1 - Copia.png') center top / auto no-repeat;
+    background-size: auto; /* Assicurati che l'immagine copra l'intera area */
+    background-attachment: scroll; /* Permette allo sfondo di muoversi con lo scrolling */
+    
+}
+
+
+
+
+  
+.background.blurred {
+  position: absolute;
+  inset: 0;
+  background: url('img/Sfondo_home - Copia.png') center top / auto no-repeat;
+  filter: blur(12px);
+  mask-image: radial-gradient(circle 150px at var(--x) var(--y), transparent 0%, black 80%);
+  -webkit-mask-image: radial-gradient(circle 150px at var(--x) var(--y), transparent 0%, black 80%);
+  mask-composite: exclude;
+  z-index: 2;
+  min-height: 100vh; /* Assicurati che l'altezza sia 200vh */
+  background-attachment: scroll; /* Permette allo sfondo di muoversi con lo scrolling */
+  
+
+}
+
+
+
+  
+  .lens {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3;
+    
+  }
+
+  
+/*body {
+  margin: 0;
+  font-family: 'TestManuka-Medium', sans-serif;
+  color: #F1EEE9;
+  overflow-x: hidden;
+  
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+*/
+.content {
+  position: relative;
+  
+  mask-image: radial-gradient(circle 150px at var(--x) var(--y), transparent 0%, black 80%);
+  -webkit-mask-image: radial-gradient(circle 150px at var(--x) var(--y), transparent 0%, black 80%);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  z-index: 1;
+}
+
+  /* Prima sezione (intro) */
+  .intro {
+    display: flex;
+    flex-direction: column; /* Dispone gli elementi in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    justify-content: center; /* Centra gli elementi verticalmente */
+    height: 100vh; /* Altezza della sezione */
+    text-align: center;
+    position: relative; /* Necessario per posizionare il bottone */
+  }
+  
+  .home-title {
+    font-family: 'TestManukaSlab-Black', serif;
+    font-size: 24rem;
+    margin: 0;
+    margin-bottom: -15px;
+    line-height: 1;
+    font-weight: 800;
+  }
+  
+  .home-subtitle {
+    font-family: 'TestManuka-Regular', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 0px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .mouse {
+    width: 25px;
+    height: 40px;
+    border: 1px solid #F1EEE9;
+    background-color: transparent;
+    border-radius: 13px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Posiziona il bottone indipendentemente dagli altri elementi */
+    bottom: 30px; /* Posiziona il bottone a 50px dal fondo della sezione */
+    left: 50%; /* Posiziona il bottone al centro orizzontale */
+    transform: translateX(-50%); /* Corregge l'offset per centrare il bottone */
+    cursor: none;
+  }
+  
+  .scroll {
+    width: 3px;
+    height: 10px;
+    background-color: #F1EEE9;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 9px;
+    animation: move_918 1.5s linear infinite;
+    cursor: none;
+  }
+  
+  @keyframes move_918 {
+    0% {
+      bottom: 9px;
+    }
+    50% {
+      bottom: 5px;
+    }
+    100% {
+      bottom: 9px;
+    }
+  }
+
+  
+  
+  /* Seconda sezione (descrizione) */
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding:0px 20px;
+    text-align: center;
+    margin-top: 100vh;
+    
+  }
+  
+  .description-container {
+    display: flex;
+    flex-direction: column; /* Dispone il testo e il bottone in colonna */
+    align-items: center; /* Centra il contenuto orizzontalmente */
+    justify-content: center; /* Centra il contenuto verticalmente */
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .description-text {
+    color: #F1EEE9;
+    text-align: center;
+    font-family: 'Borna-Medium';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 137.5% */
+    margin-bottom: 20px; /* Aggiunge spazio tra il testo e il bottone */
+  }
+    
+  
+  .description-text .highlight {
+    color: rgb(251, 210, 54);
+    font-family: 'TestManukaSlab-Medium';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 2px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centra il bottone orizzontalmente */
+    margin-top: 20px; /* Aggiunge spazio sopra il bottone */
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    transition: transform 0.2s ease-in-out;
+    padding: 0;
+  }
+  
+  .text {
+    position: relative;
+    font-family: 'TestManuka-Medium', sans-serif;
+    font-size: 36px;
+    color: #F1EEE9;
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: 500;
+    overflow: hidden;
+    display: inline-block; /* necessario per il ::after */
+    
+  }
+  
+  .text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    height: 3px;
+    background-color: #F1EEE9;
+    transition: right 0.4s ease;
+  }
+  
+  .button:hover .text::after {
+    right: 0;
+  }
+  
+  
+  .arrow {
+    font-family: 'Borna-Regular', sans-serif;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: #F1EEE9;
+    border: 3px solid #F1EEE9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 400;
+  }
+  
+  .button:hover .arrow {
+    animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    color: #5C072B;
+    background-color: #F1EEE9;
+    
+  }
+
+  
+  
+  
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-8px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+  .button:active {
+    transform: scale(0.97);
+  }
+
+  #torna-su {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    background-color: transparent;
+    color: #F1EEE9;
+    border: 3px solid #F1EEE9;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Nascondi il pulsante inizialmente */
+    z-index: 1000;
+    font-family: 'Borna-Regular', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  #torna-su:hover {
+    color: #5C072B;
+    background-color: #F1EEE9;
+    animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    
+  }
+
+
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(8px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+
+   /* Breakpoint < 1280*/
+ /* Breakpoint < 1280 */
+@media screen and (max-width: 1279px) {
+  section {
+    font-size: 6vw; /* Riduci la dimensione del font */
+  }
+
+ 
+
+}
+
+
+   /* Breakpoint 1280 - 1439px */
+   @media screen and (min-width: 1280px) and (max-width: 1439px) {
+    section {
+      font-size: 5vw;
+    }
+  }
+
+  /* Breakpoint 1440px - 1919px */
+  @media screen and (min-width: 1440px) and (max-width: 1919px) {
+    section {
+      font-size: 3.5vw;
+    }
+
+    .background {
+      background-size: cover; /* Imposta lo sfondo come cover */
+    }
+
+    .background.blurred {
+      background-size: cover; /* Imposta lo sfondo come cover */
+    }
+  }
+
+  /* Breakpoint > 1920px */
+  @media screen and (min-width: 1920px) {
+    section {
+      font-size: 2.5vw;
+    }
+    .background {
+      background-size: cover; /* Imposta lo sfondo come cover */
+    }
+
+    .background.blurred {
+      background-size: cover; /* Imposta lo sfondo come cover */
+    }
+  }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mappa Biodiversità - Peseggia</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css">
+  <!-- Include Google Material Symbols (già incluso come ci hai scritto tu) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+  </style>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.js"></script>
+
+</head>
+<body>
+
+  <div class="map-style-toggle">
+    <button id="mapBtn" class="active">Default</button>
+    <button id="satelliteBtn">Satellite</button>
+  </div>
+  
+  <div id="info-panel">
+    <div id="info-content">
+      <h2>Un piccolo paese, una rete viva</h2>
+      <p>Peseggia è un piccolo paese del Veneto, immerso tra acque risorgive, canali e campi coltivati.
+        A prima vista, un paesaggio comune.
+        Ma se lo si guarda con attenzione, rivela una straordinaria densità di vita: uccelli nascosti tra i tetti, insetti tra le siepi, muschi sui marciapiedi.
+        
+        In questa esplorazione ti guideremo attraverso il territorio partendo dai luoghi più riconoscibili le aree verdi, i corsi d’acqua, i margini dei campi fino ad arrivare agli angoli più inaspettati del paesaggio urbano.
+        
+        Ogni tappa è una finestra aperta sulla biodiversità.
+        
+        Non è una visita guidata tradizionale: è un cambio di sguardo.
+        Scopri con calma, segui il tuo ritmo, e lascia che sia la mappa a condurti, un punto dopo l’altro.</p>
+      
+    </div>
+    <div class="nav-buttons">
+      <button id="homeBtn" style="display: none;" onclick="goHome()">Home</button>
+      <button id="startBtn" onclick="startJourney()">Inizia</button>
+      <button id="prevBtn" onclick="gotoPrev()" style="display: none;">←</button>
+      <button id="nextBtn" onclick="gotoNext()" style="display: none;">→</button>
+    </div>
+  </div>
+   
+<div id="map"></div>
+
+<!-- Toggle Filters Icon -->
+<div id="filter-toggle" aria-label="Toggle filters">
+  <span class="material-symbols-outlined" id="filter-icon">tune</span>
+</div>
+
+
+
+<!-- FILTRI -->
+<div class="filter-panel hidden" id="filterPanel">
+  <strong>Filtra per gruppo:</strong><br>
+  <div class="filter-button" data-taxon="Animalia">Animalia</div>
+  <div class="filter-button" data-taxon="Insecta">Insecta</div>
+  <div class="filter-button" data-taxon="Aves">Aves</div>
+  <div class="filter-button" data-taxon="Reptilia">Reptilia</div>
+  <div class="filter-button" data-taxon="Mollusca">Mollusca</div>
+  <div class="filter-button" data-taxon="Fungi">Fungi</div>
+  <div class="filter-button" data-taxon="Arachnida">Arachnida</div>
+  <div class="filter-button" data-taxon="Mammalia">Mammalia</div>
+  <div class="filter-button" data-taxon="Actinopterygii">Actinopterygii</div>
+  <div class="filter-button" data-taxon="Plantae">Plantae</div>
+</div>
+
+
+
+<script src="Script.js"></script>
+</body>
+</html>

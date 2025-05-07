@@ -1,0 +1,416 @@
+@font-face {
+  font-family: 'TestManukaSlab-Black';
+  src: url('font/TestManukaSlab-Black-BF663c33db53960.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TestManuka-Medium';
+  src: url('font/TestManuka-Medium-BF663c33db67c40.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TestManuka-Regular';
+    src: url('font/TestManuka-Regular-BF663c33db89825.otf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'TestManuka-Light';
+    src: url('font/TestManuka-Light-BF663c33db8aab4.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'TestManuka-Thin';
+    src: url('font/TestManuka-Thin-BF663c33db97e05.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Borna-Medium';
+    src: url('font/Borna-Medium.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Borna-Regular';
+    src: url('font/Borna-Regular.otf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'TestManukaSlab-Medium';
+    src: url('font/TestManukaSlab-Medium-BF663c33db66d36.otf') format('truetype');
+  }
+  
+  :root {
+    --background-color:  #F1EEE9;
+    --text-color: #5C072B;
+    --themeColor1: #068076;
+    --themeColor2: #fbd236;
+  }
+  
+  html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Borna-Regular', sans-serif;
+  background-color: var(--themeColor1); /* beige caldo */
+  color: var(--themeColor2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden; /* Nasconde lo scroll */
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 15%; /* Sposta la mappa a destra del pannello */
+  width: 85%; /* Occupa il restante 70% della larghezza */
+  height: 100%; /* Assicura che la mappa occupi tutta l'altezza */
+  margin: 0; /* Rimuove eventuali margini */
+  padding: 0; /* Rimuove eventuali padding */
+  box-sizing: border-box; /* Include bordi e padding nel calcolo delle dimensioni */
+  z-index: 1; /* Mappa sotto il pannello informativo */
+}
+
+#info-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%; /* Occupa il 30% della larghezza della pagina */
+  height: 100%; /* Occupa tutta l'altezza */
+  background: var(--themeColor1);
+  color: var(--themeColor2); /* Colore del testo */
+  padding: 30px 40px 0px 40px; /* Padding interno */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Sopra la mappa */
+  box-sizing: border-box; /* Include bordi e padding nel calcolo delle dimensioni */
+}
+
+#info-content {
+  margin-bottom: 20px;
+}
+
+#info-content h2 {
+  font-size: 4vw;
+  margin-bottom: 50px;
+  font-family: 'TestManukaSlab-Black', serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 0;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+#info-content p {
+  font-size: 1vw;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+#startBtn {
+  position: absolute;
+  bottom: 20px; /* Distanza fissa dal fondo dell'info-panel */
+  left: 50%; /* Posiziona il pulsante al centro orizzontale */;
+  transform: translateX(-50%); /* Centra il pulsante orizzontalmente */
+  padding: 0px 0px;
+  font-size: 3vw;
+  border: none;
+  background: none;
+  color: var(--themeColor2);
+  cursor: pointer;
+  font-family: 'TestManuka-Medium', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  overflow: hidden; /* Necessario per l'effetto ::after */
+  display: inline-block; /* Necessario per il ::after */
+  box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza */
+}
+
+#startBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Inizia la linea dal lato sinistro */
+  width: 100%; /* La linea sarà lunga quanto il pulsante */
+  height: 3px;
+  background-color: var(--themeColor2);
+  transform: scaleX(0); /* Nasconde inizialmente la linea */
+  transform-origin: left; /* L'animazione parte da sinistra */
+  transition: transform 0.4s ease; /* Aggiunge un'animazione fluida */
+}
+
+#startBtn:hover::after {
+  transform: scaleX(1); /* Mostra la linea al passaggio del mouse */
+}
+
+#homeBtn{
+  position: absolute;
+  bottom: 20px; /* Distanza fissa dal fondo dell'info-panel */
+  left: 50%; /* Posiziona il pulsante al centro orizzontale */;
+  transform: translateX(-50%); /* Centra il pulsante orizzontalmente */
+  padding: 0px 0px;
+  font-size: 3vw;
+  border: none;
+  background: none;
+  color: var(--themeColor2);
+  cursor: pointer;
+  font-family: 'TestManuka-Medium', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  overflow: hidden; /* Necessario per l'effetto ::after */
+  display: inline-block; /* Necessario per il ::after */
+  box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza */
+}
+
+#homeBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Inizia la linea dal lato sinistro */
+  width: 100%; /* La linea sarà lunga quanto il pulsante */
+  height: 3px;
+  background-color: var(--themeColor2);
+  transform: scaleX(0); /* Nasconde inizialmente la linea */
+  transform-origin: left; /* L'animazione parte da sinistra */
+  transition: transform 0.4s ease; /* Aggiunge un'animazione fluida */
+}
+
+#homeBtn:hover::after {
+  transform: scaleX(1); /* Mostra la linea al passaggio del mouse */
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 20px; /* Distanza fissa dal fondo dell'info-panel */
+  left: 0; /* Allinea i bottoni al bordo sinistro dell'info-panel */
+  width: 100%; /* Occupa tutta la larghezza dell'info-panel */
+  display: flex;
+  justify-content: space-between; /* Distribuisce i bottoni ai bordi */
+  padding: 0 30px; /* Aggiunge un po' di spazio dai bordi */
+  box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+}
+
+.nav-buttons button {
+  padding: 8px; /* Riduci il padding per adattare le frecce */
+  font-size: 20px; /* Dimensione delle frecce */
+  border: none; /* Rimuovi i bordi */
+  background: transparent;
+  color: var(--themeColor2);
+  cursor: pointer;
+  position: relative; /* Necessario per il ::before */
+  overflow: hidden; /* Nasconde il contenuto in eccesso */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+#prevBtn{
+  font-family: 'Borna-Regular', sans-serif;
+  font-weight: 500;
+  font-size: 2vw; /* Dimensione del testo */
+}
+#nextBtn{
+  font-family: 'Borna-Regular', sans-serif;
+  font-weight: 500;
+  font-size: 2vw; /* Dimensione del testo */
+}
+
+
+#prevBtn:hover {
+  animation: slide-left 0.4s ease-in-out;
+}
+
+#nextBtn:hover {
+  animation: slide-right 0.4s ease-in-out;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+
+
+#filter-icon {
+  font-size: 20px;
+
+}
+
+#filter-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 11;
+  background: var(--themeColor1);
+  color: var(--themeColor2);
+  padding: 8px 10px;
+  border: 3px solid var(--themeColor2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#filter-toggle:hover {
+  background: var(--themeColor2);
+  transform: scale(1.0);
+  color: var(--themeColor1);
+}
+
+
+.filter-panel {
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  z-index: 10;
+  color: #1a1a1a;
+  border: 1px solid rgba(26, 26, 26, 0.3);
+}
+
+.filter-panel.open {
+  max-height: 800px;
+}
+
+.filter-panel.hidden {
+  display: none;
+}
+
+.filter-panel .filter-button {
+  display: block;
+  background: rgba(200, 200, 200, 0.2);
+  color: #1a1a1a;
+  padding: 6px 12px;
+  margin: 4px 0;
+  border: 1px solid #1a1a1a;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.2s ease;
+  
+}
+
+.filter-panel .filter-button:hover {
+  background: #1a1a1a;
+  color: #f0ede5;
+  transform: scale(1.05);
+}
+
+.filter-panel .filter-button.active {
+  background: #8ab776;
+  color: #fff;
+}
+
+.map-style-toggle {
+  font-family: 'TestManuka-Medium', sans-serif;
+  font-weight: 500;
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+  background: var(--background-color);
+  display: flex;
+  z-index: 10;
+}
+
+.map-style-toggle button {
+  padding: 8px 14px;
+  border: var(--themeColor1) 1px solid;
+  background: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 11px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.map-style-toggle button:hover {
+  background: var(--themeColor2);
+  color: var(--text-color);
+}
+
+.map-style-toggle button.active {
+  background: var(--themeColor2);
+  color: var(--themeColor1);
+}
+
+.mapboxgl-popup {
+  max-width: none !important;
+}
+
+.mapboxgl-popup-tip {
+  border-right-color: var(--themeColor2) !important;
+}
+
+.mapboxgl-popup-content {
+  background-color: var(--themeColor2);
+  color: var(--themeColor1);
+  font-family: Borna-Regular, sans-serif;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  max-height: none; /* Rimuove eventuali limiti di altezza */
+  max-width: none; /* Rimuove eventuali limiti di larghezza */
+  height: auto; /* Permette al contenuto di determinare l'altezza */
+  width: 300px !important; /* Imposta la larghezza desiderata */
+}
+
+.popup-content {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.popup-image {
+  max-width: 100%; /* L'immagine occupa tutta la larghezza del popup */
+  height: auto; /* Mantiene le proporzioni dell'immagine */
+  display: block;
+}
+
+.popup-title {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'TestManukaSlab-Black', serif;
+  text-transform: uppercase;
+}
+
+.map-fade {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+
+.highlight {
+  font-family: 'TestManukaSlab-Medium', serif;
+  font-weight: 700 !important;
+  font-size: 1.1vw;
+  letter-spacing:2px;
+  text-decoration: underline;
+  line-height: 1;
+}
