@@ -262,52 +262,39 @@ const locations = [
     coords: [12.1822, 45.56236], 
     titolo: "Il cuore verde",
     descrizione: `
-      Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
+      <span class="testi-narrazione">Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
       Ma basta fermarsi un attimo per accorgersi che la vita qui è tutt’altro che silenziosa.
 
-      Un <span class="highlight">merlo</span> si muove tra i fili d’erba, attento e rapido.
-      Sotto le foglie, minuscoli funghi si affacciano dal suolo.
-      Una coppia di insetti si incontra sulla superficie vellutata di una foglia.
-      E c’è chi si nasconde meglio: un gruppo di piccoli esseri vive nella crepa di una corteccia.
-
-      Anche le panchine, che sembrano fatte solo per noi, ospitano altre presenze: due uccelli le abitano con naturalezza.
+      <span class="highlight">Un merlo si muove tra i fili d’erba, attento e rapido.</span></span>
     `
   },
   { coords: [12.180784, 45.560929], titolo: "Il cuore verde", descrizione:`
-      Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
+      <span class="testi-narrazione">Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
       Ma basta fermarsi un attimo per accorgersi che la vita qui è tutt’altro che silenziosa.
 
       Un merlo si muove tra i fili d’erba, attento e rapido.
-      Sotto le foglie, minuscoli <span class="highlight">funghi</span> si affacciano dal suolo.
-      Una coppia di insetti si incontra sulla superficie vellutata di una foglia.
-      E c’è chi si nasconde meglio: un gruppo di piccoli esseri vive nella crepa di una corteccia.
-
-      Anche le panchine, che sembrano fatte solo per noi, ospitano altre presenze: due uccelli le abitano con naturalezza.
-    ` },
+      <span class="highlight">Sotto le foglie, minuscoli funghi si affacciano dal suolo.</span></span>
+   ` },
   { coords: [12.184359, 45.560119], titolo: "Il cuore verde", descrizione: `
-      Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
+      <span class="testi-narrazione">Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
       Ma basta fermarsi un attimo per accorgersi che la vita qui è tutt’altro che silenziosa.
 
       Un merlo si muove tra i fili d’erba, attento e rapido.
       Sotto le foglie, minuscoli funghi si affacciano dal suolo.
-      Una coppia di <span class="highlight" data-id="insetti-foglia" id="insetti-foglia">insetti</span> si incontra sulla superficie vellutata di una foglia.
-      E c’è chi si nasconde meglio: un gruppo di piccoli esseri vive nella crepa di una corteccia.
-
-      Anche le panchine, che sembrano fatte solo per noi, ospitano altre presenze: due uccelli le abitano con naturalezza.
-    ` },
+      <span class="highlight" data-id="insetti-foglia" id="insetti-foglia">Una coppia di insetti si incontra sulla superficie vellutata di una foglia.</span></span>
+     ` },
   { coords: [12.18106, 45.560853], titolo: "Il cuore verde", descrizione: `
-      Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
+      <span class="testi-narrazione">Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
       Ma basta fermarsi un attimo per accorgersi che la vita qui è tutt’altro che silenziosa.
 
       Un merlo si muove tra i fili d’erba, attento e rapido.
       Sotto le foglie, minuscoli funghi si affacciano dal suolo.
       Una coppia di insetti si incontra sulla superficie vellutata di una foglia.
-      E c’è chi si nasconde meglio: un gruppo di <span class="highlight">piccoli esseri</span> vive nella crepa di una corteccia.
-
-      Anche le panchine, che sembrano fatte solo per noi, ospitano altre presenze: due uccelli le abitano con naturalezza.
-    ` },
+      <span class="highlight">E c’è chi si nasconde meglio: un gruppo di piccoli esseri vive nella crepa di una corteccia.</span></span>
+      ` },
+      
   { coords: [12.186814, 45.559878], titolo: "Il cuore verde", descrizione: `
-      Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
+      <span class="testi-narrazione">Tutto comincia dove ce lo aspettiamo: un prato, qualche albero, una zona tranquilla.
       Ma basta fermarsi un attimo per accorgersi che la vita qui è tutt’altro che silenziosa.
 
       Un merlo si muove tra i fili d’erba, attento e rapido.
@@ -315,101 +302,84 @@ const locations = [
       Una coppia di insetti si incontra sulla superficie vellutata di una foglia.
       E c’è chi si nasconde meglio: un gruppo di piccoli esseri vive nella crepa di una corteccia.
 
-      Anche le panchine, che sembrano fatte solo per noi, ospitano altre presenze: <span class="highlight">due uccelli</span> le abitano con naturalezza.
+      <span class="highlight">Anche le panchine, che sembrano fatte solo per noi, ospitano altre presenze: due uccelli le abitano con naturalezza.</span></span>
     ` },
 
     { coords: [12.192693, 45.56064], titolo: "Linee di confine", descrizione: 
-      `Appena ci si allontana dalle aree verdi più riconoscibili, la biodiversità continua a manifestarsi nei luoghi di passaggio: ai bordi delle strade, lungo i fossati, tra le case e i campi.     
-      Una <span class="highlight">cornacchia</span> si muove sul ciglio della strada, attento ai movimenti.
-      Una nutria nuota silenziosa nel fossato, tra le rive erbose.
-      Sull’asfalto, un bruco avanza lentamente, a pochi passi da noi.
-      Questi spazi di confine ospitano forme di vita capaci di adattarsi ai margini del nostro paesaggio.
-      Luoghi spesso ignorati, ma pieni di presenze.` 
+      `<span class="testi-narrazione">Appena ci si allontana dalle aree verdi più riconoscibili, la biodiversità continua a manifestarsi nei luoghi di passaggio: ai bordi delle strade, lungo i fossati, tra le case e i campi.     
+      <span class="highlight">Una cornacchia si muove sul ciglio della strada, attento ai movimenti.</span></span>
+      ` 
       },
 
       { coords: [12.192695,
         45.560477], titolo: "Linee di confine", descrizione: 
-        `Appena ci si allontana dalle aree verdi più riconoscibili, la biodiversità continua a manifestarsi nei luoghi di passaggio: ai bordi delle strade, lungo i fossati, tra le case e i campi.     
+        `<span class="testi-narrazione">Appena ci si allontana dalle aree verdi più riconoscibili, la biodiversità continua a manifestarsi nei luoghi di passaggio: ai bordi delle strade, lungo i fossati, tra le case e i campi.     
         Una cornacchia si muove sul ciglio della strada, attento ai movimenti.
-        Una <span class="highlight">nutria</span> nuota silenziosa nel fossato, tra le rive erbose.
-        Sull’asfalto, un bruco avanza lentamente, a pochi passi da noi.
-        Questi spazi di confine ospitano forme di vita capaci di adattarsi ai margini del nostro paesaggio.
-        Luoghi spesso ignorati, ma pieni di presenze.` 
+        <span class="highlight">Una nutria nuota silenziosa nel fossato, tra le rive erbose.</span></span>
+        ` 
         },
 
         { coords: [12.192141,
           45.559881], titolo: "Linee di confine", descrizione: 
-          `Appena ci si allontana dalle aree verdi più riconoscibili, la biodiversità continua a manifestarsi nei luoghi di passaggio: ai bordi delle strade, lungo i fossati, tra le case e i campi.     
+          `<span class="testi-narrazione">Appena ci si allontana dalle aree verdi più riconoscibili, la biodiversità continua a manifestarsi nei luoghi di passaggio: ai bordi delle strade, lungo i fossati, tra le case e i campi.     
           Una cornacchia si muove sul ciglio della strada, attento ai movimenti.
           Una nutria nuota silenziosa nel fossato, tra le rive erbose.
-          Sull’asfalto, un <span class="highlight">bruco</span> avanza lentamente, a pochi passi da noi.
+          <span class="highlight">Sull’asfalto, un bruco avanza lentamente, a pochi passi da noi.
           Questi spazi di confine ospitano forme di vita capaci di adattarsi ai margini del nostro paesaggio.
-          Luoghi spesso ignorati, ma pieni di presenze.` 
+          Luoghi spesso ignorati, ma pieni di presenze.</span></span>` 
           },
 
           { coords: [12.185421,
             45.558929], titolo: "Vita sul cemento", descrizione: 
-            `Anche gli spazi più urbanizzati, come muretti e marciapiedi, ospitano forme di vita che spesso ignoriamo.
-              Una <span class="highlight">lucertola</span> si scalda immobile sul cemento, confondendosi con la parete.
-              Un riccio attraversa il marciapiede nelle ore più tranquille, cercando riparo tra gli angoli.
-              Una lumaca avanza lenta vicino a un muro, tracciando un percorso lucido sul grigio.
-              Sono incontri quotidiani e silenziosi, che ci ricordano come la biodiversità non sia mai lontana nemmeno dove tutto sembra artificiale.` 
+            `<span class="testi-narrazione">Anche gli spazi più urbanizzati, come muretti e marciapiedi, ospitano forme di vita che spesso ignoriamo.
+              <span class="highlight">Una lucertola si scalda immobile sul cemento, confondendosi con la parete.</span></span>
+              ` 
             },
 
             { coords: [12.185453, 45.560884], titolo: "Vita sul cemento", descrizione: 
-              `Anche gli spazi più urbanizzati, come muretti e marciapiedi, ospitano forme di vita che spesso ignoriamo.
+              `<span class="testi-narrazione">Anche gli spazi più urbanizzati, come muretti e marciapiedi, ospitano forme di vita che spesso ignoriamo.
                 Una lucertola si scalda immobile sul cemento, confondendosi con la parete.
-                Un <span class="highlight">riccio</span> attraversa il marciapiede nelle ore più tranquille, cercando riparo tra gli angoli.
-                Una lumaca avanza lenta vicino a un muro, tracciando un percorso lucido sul grigio.
-                Sono incontri quotidiani e silenziosi, che ci ricordano come la biodiversità non sia mai lontana nemmeno dove tutto sembra artificiale.` 
+                <span class="highlight">Un riccio attraversa il marciapiede nelle ore più tranquille, cercando riparo tra gli angoli.</span></span>
+                ` 
               },
 
               { coords: [12.179198, 45.562333], titolo: "Vita sul cemento", descrizione: 
-                `Anche gli spazi più urbanizzati, come muretti e marciapiedi, ospitano forme di vita che spesso ignoriamo.
+                `<span class="testi-narrazione">Anche gli spazi più urbanizzati, come muretti e marciapiedi, ospitano forme di vita che spesso ignoriamo.
                   Una lucertola si scalda immobile sul cemento, confondendosi con la parete.
                   Un riccio attraversa il marciapiede nelle ore più tranquille, cercando riparo tra gli angoli.
-                  Una <span class="highlight">lumaca</span> avanza lenta vicino a un muro, tracciando un percorso lucido sul grigio.
-                  Sono incontri quotidiani e silenziosi, che ci ricordano come la biodiversità non sia mai lontana nemmeno dove tutto sembra artificiale.` 
+                  <span class="highlight">Una lumaca avanza lenta vicino a un muro, tracciando un percorso lucido sul grigio.
+                  Sono incontri quotidiani e silenziosi, che ci ricordano come la biodiversità non sia mai lontana nemmeno dove tutto sembra artificiale.</span></span>` 
                 },
 
                 { coords: [12.185517, 45.560615], titolo: "Presenze domestiche", descrizione: 
-                  `Infine, anche nei luoghi più familiari, la biodiversità continua a sorprenderci.
-                    Un <span class="highlight">piccolo merlo</span> si muove nel giardino di casa, tra erba e rami bassi.
-                    Una tortora si ferma sul davanzale di una finestra, osservando tranquilla.
-                    Una farfalla si posa su una ruota d’auto parcheggiata, per poi ripartire.
-                    Una lucertola sbuca rapida tra i gradini delle scale di casa.
-                    Sono presenze quotidiane, vicinissime, eppure spesso ignorate.
-                    Riconoscerle significa iniziare a vedere casa nostra come parte di un ecosistema più ampio.` 
+                  `<span class="testi-narrazione">Infine, anche nei luoghi più familiari, la biodiversità continua a sorprenderci.
+                    <span class="highlight">Un piccolo merlo si muove nel giardino di casa, tra erba e rami bassi.</span></span>
+                    ` 
                   },
                 
                   { coords: [12.185559, 45.560683], titolo: "Presenze domestiche", descrizione: 
-                    `Infine, anche nei luoghi più familiari, la biodiversità continua a sorprenderci.
+                    `<span class="testi-narrazione">Infine, anche nei luoghi più familiari, la biodiversità continua a sorprenderci.
                       Un piccolo merlo si muove nel giardino di casa, tra erba e rami bassi.
-                      Una <span class="highlight">tortora</span> si ferma sul davanzale di una finestra, osservando tranquilla.
-                      Una farfalla si posa su una ruota d’auto parcheggiata, per poi ripartire.
-                      Una lucertola sbuca rapida tra i gradini delle scale di casa.
-                      Sono presenze quotidiane, vicinissime, eppure spesso ignorate.
-                      Riconoscerle significa iniziare a vedere casa nostra come parte di un ecosistema più ampio.` 
+                      <span class="highlight">Una tortora si ferma sul davanzale di una finestra, osservando tranquilla.</span></span>
+                      ` 
                     },
 
                     { coords: [12.185486, 45.560402], titolo: "Presenze domestiche", descrizione: 
-                      `Infine, anche nei luoghi più familiari, la biodiversità continua a sorprenderci.
+                      `<span class="testi-narrazione">Infine, anche nei luoghi più familiari, la biodiversità continua a sorprenderci.
                         Un piccolo merlo si muove nel giardino di casa, tra erba e rami bassi.
                         Una tortora si ferma sul davanzale di una finestra, osservando tranquilla.
-                        Una <span class="highlight">farfalla</span> si posa su una ruota d’auto parcheggiata, per poi ripartire.
-                        Una lucertola sbuca rapida tra i gradini delle scale di casa.
-                        Sono presenze quotidiane, vicinissime, eppure spesso ignorate.
-                        Riconoscerle significa iniziare a vedere casa nostra come parte di un ecosistema più ampio.` 
+                        <span class="highlight">Una farfalla si posa su una ruota d’auto parcheggiata, per poi ripartire.</span></span>
+                        ` 
                       },
 
                       { coords: [12.185573, 45.560575], titolo: "Presenze domestiche", descrizione: 
-                        `Infine, anche nei luoghi più familiari, la biodiversità continua a sorprenderci.
+                        `<span class="testi-narrazione">Infine, anche nei luoghi più familiari, la biodiversità continua a sorprenderci.
                           Un piccolo merlo si muove nel giardino di casa, tra erba e rami bassi.
                           Una tortora si ferma sul davanzale di una finestra, osservando tranquilla.
                           Una farfalla si posa su una ruota d’auto parcheggiata, per poi ripartire.
-                          Una <span class="highlight">lucertola</span> sbuca rapida tra i gradini delle scale di casa.
+                          <span class="highlight">Una lucertola sbuca rapida tra i gradini delle scale di casa.
                           Sono presenze quotidiane, vicinissime, eppure spesso ignorate.
-                          Riconoscerle significa iniziare a vedere casa nostra come parte di un ecosistema più ampio.` 
+                          Riconoscerle significa iniziare a vedere casa nostra come parte di un ecosistema più ampio.</span></span>` 
                         },
 
                       
@@ -551,12 +521,9 @@ function startJourney() {
     }
     });
   
-    // Rimuovi classe active da tutti i filtri
-    const filterButtons = document.querySelectorAll('.filter-button');
-    filterButtons.forEach(btn => btn.classList.remove('active'));
+    
   
-    // RICHIAMA SETUP FILTRI PER SICUREZZA
-    setupFilterLogic(); // <-- aggiunto per ristabilire gli event listener
+    
   
     // Aggiorna visibilità dei marker (tutti visibili)
     updateMarkerVisibility();
