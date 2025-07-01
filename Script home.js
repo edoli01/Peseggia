@@ -91,13 +91,16 @@ if (scrollToTopBtn) {
   });
 }
 
-// Mostra il pulsante "Torna su" quando l'utente scrolla verso il basso
+// Mostra il pulsante "Torna su" e la dicitura quando l'utente scrolla verso il basso
 document.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
+  const descr = document.querySelector('.description-dicitura');
 
   if (scrollY > window.innerHeight) {
     scrollToTopBtn.style.display = 'block'; // Mostra il pulsante
+    if (descr) descr.style.display = 'block'; // Mostra la dicitura
   } else {
     scrollToTopBtn.style.display = 'none'; // Nascondi il pulsante
+    if (descr) descr.style.display = 'none'; // Nascondi la dicitura
   }
 });
