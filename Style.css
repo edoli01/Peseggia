@@ -24,6 +24,12 @@
   }
 
   @font-face {
+    font-family: 'Borna-Bold';
+    src: url('font/Borna-Bold.otf') format('truetype');
+  }
+
+
+  @font-face {
     font-family: 'Borna-Medium';
     src: url('font/Borna-Medium.otf') format('truetype');
   }
@@ -407,10 +413,14 @@
 
 
 .highlight {
-  font-family: 'TestManukaSlab-Medium', serif;
-  font-weight: 700 !important;
-  font-size: 1.1vw;
-  letter-spacing:2px;
-  text-decoration: underline;
-  line-height: 1;
+  font-family: 'Borna-Bold', sans-serif;
+  
+  
+}
+
+.testi-narrazione {
+  font-size: 1.2vw;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 500;
 }
