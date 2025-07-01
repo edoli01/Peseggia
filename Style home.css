@@ -101,19 +101,6 @@
   }
 
   
-/*body {
-  margin: 0;
-  font-family: 'TestManuka-Medium', sans-serif;
-  color: #F1EEE9;
-  overflow-x: hidden;
-  
-  background-size: cover;
-  background-attachment: scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-*/
 .content {
   position: relative;
   
@@ -309,7 +296,28 @@
     
   }
 
-  
+  .description-dicitura {
+  display: none;
+  color: #F1EEE9;
+  text-align: center;
+  font-family: 'Borna-Medium';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  margin: 0;
+  width: 100%; /* Più stretto */
+  max-width: 90vw;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
   
   
   @keyframes slide-in-left {
